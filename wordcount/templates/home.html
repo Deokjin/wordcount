@@ -1,10 +1,34 @@
-<h1>안녕하세요, 여기서 열심히 글자를 세세요!</h1>
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/allstyle.css'%}">
+</head>
+<body>
 
-<a href="{%url 'about'%}">About</a>
+
+        <h1>안녕하세요, 여기서 열심히 단어 수와 글자수를 세세요!</h1>
+
+        
+        <form action="{%url 'result'%}" id="formcenter" display=inline-block>
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <input type = "submit" value="count">
+        </form> 
+        
+
+        <br>
+
+        <div class="textcenter">
+        <a href="{%url 'about'%}">사용방법</a>
+        </div>
+         
+</body>
+</html>
 
 
-<form action="{%url 'result'%}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type = "submit" value="count!">
-</form> 
